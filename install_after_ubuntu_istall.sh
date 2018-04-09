@@ -21,7 +21,9 @@ sudo gedit /etc/exports
 
 
 #On the client
-#mount -t nfs 211.238.111.124:/home/hjpark /mnt
+#sudo mount -t nfs 211.238.111.124:/home/hjpark /mnt
+#sudo mount -t nfs 192.168.0.250:/imslab ./nfs-ims-file-server/
+
 
 sudo apt install -y fslint
 sudo apt install -y filezilla
@@ -30,4 +32,5 @@ git config --global user.email "hjparkg71@gmail.com"
 git config --global user.name "hjpark"
 
 
-
+#Ubuntu software 에서
+# guvcview 설치
