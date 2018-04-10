@@ -34,3 +34,6 @@ git config --global user.name "hjpark"
 
 #Ubuntu software 에서
 # guvcview 설치
+
+#nvidia driver 설치
+sudo apt-get install -y nvidia-352
