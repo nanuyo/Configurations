@@ -16,13 +16,26 @@ sudo service smbd restart
 sudo apt-get install -y nfs-common nfs-kernel-server portmap
 chmod 777 /home/hjpark/
 sudo gedit /etc/exports 
-#/home/hjpark 39.118.159.18 (rw,all_squash,async)
+#/home/hjpark/AndroidStudioProjects 39.118.159.18 (rw,all_squash,async)
 
 
 
 #On the client
 #sudo mount -t nfs 211.238.111.124:/home/hjpark /mnt
 #sudo mount -t nfs 192.168.0.250:/imslab ./nfs-ims-file-server/
+
+#<NFS client 에서 auto mount>
+
+mkdir ~/nfs-ims-file-server
+sudo mkdir /media/hjpark/WD2TB
+sudo gedit /etc/fstab
+
+#192.168.0.250:/imslab /home/hjpark/nfs-ims-file-server/  nfs rsize=8192,wsize=8192,timeo=14,intr,bg
+#/dev/sdb1     /media/hjpark/WD2TB ntfs defaults 1 2
+
+sudo mount -a
+
+
 
 
 sudo apt install -y fslint
