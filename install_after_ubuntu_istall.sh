@@ -35,7 +35,10 @@ sudo gedit /etc/fstab
 
 sudo mount -a
 
+handbrake
 
+#midnight commander
+sudo apt-get install mc
 
 
 sudo apt install -y fslint
