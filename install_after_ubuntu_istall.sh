@@ -53,3 +53,18 @@ git config --global user.name "hjpark"
 
 #nvidia driver 설치
 sudo apt-get install -y nvidia-352
+
+
+
+
+
+
+
+sudo apt install qemu-kvm cpu-checker
+kvm-ok
+sudo addgroup kvm
+sudo usermod -a -G kvm hjpark
+sudo chgrp kvm /dev/kvm
+sudo nano /etc/udev/rules.d/60-qemu-kvm.rules
+    KERNEL=="kvm", GROUP="kvm", MODE="0660"
+reboot
