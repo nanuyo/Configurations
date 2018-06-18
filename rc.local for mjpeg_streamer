@@ -1,0 +1,7 @@
+cd /root/mjpg-streamer
+
+echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/lib/mjpg-streamer" | sudo tee -a /etc/profile
+
+./mjpg_streamer -i "./input_uvc.so -y 1 -r 640x480 -f 30 -q 90 -n" -o "./output_http.so -w ./www" &
+
+./mjpg_streamer -i "./input_uvc.so -d /dev/video1  -y 1 -r 640x480 -f 30 -q 90 -n" -o "./output_http.so -w ./www -p 8081" &
